@@ -1,0 +1,17 @@
+{
+    "chromium":{
+        "EN":{
+            "txtUsername":"//input[@name='username']",
+            "txtPassword":"//input[@name='password']",
+            "btnLogin":"//button[contains(@class,'oxd-button')]"
+        }
+    },
+    "firefox":{
+
+    },
+    "webkit":{
+
+    }
+}
+
+

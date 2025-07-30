@@ -1,28 +1,28 @@
 import { PlaywrightTestConfig, devices } from '@playwright/test';
 
 const config: PlaywrightTestConfig = {
-  testMatch: ['tests/pomTest/registerAndLogin.spect.ts'],
+  testMatch: ['tests/orange_001.spect.ts'],
   use: {
     headless: false,
-    baseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php',
+    baseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
   },
   projects: [
     {
-      name: 'Chromium',
+      name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
     // {
-    //   name: 'Firefox',
+    //   name: 'firefox',
     //   use: { ...devices['Desktop Firefox'] },
     // },
     // {
-    //   name: 'WebKit',
+    //   name: 'webkit',
     //   use: { ...devices['Desktop Safari'] },
     // },
   ],
-  timeout: 30000,
+  timeout: 120000,
   reporter: [
     ['dot'],
     ['json', { outputFile: 'Test-rs/test-results.json' }],
