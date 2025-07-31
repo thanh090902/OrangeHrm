@@ -1,0 +1,14 @@
+{
+    "chromium": {
+        "EN": {
+            "lblTopbarHeader": "//h6[text()='%s']",
+            "navSidebarMenu": "//span[contains(.,'%s')]/parent::a"
+        }
+    },
+    "firefox":{
+
+    },
+    "webkit":{
+
+    }
+}

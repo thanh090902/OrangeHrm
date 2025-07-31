@@ -15,7 +15,7 @@ export const test = base.extend<BaseTestFixture>({
 
 // global beforeEach
 test.beforeEach(async ({ page, baseURL }) => {
-    await page.goto(`${baseURL}`, { waitUntil: 'networkidle' });
+    await page.goto(`${baseURL}`, { waitUntil: 'networkidle' }); // custom goto boc trong page object
 
 });
 

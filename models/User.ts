@@ -9,7 +9,6 @@ export class User{
 
         if(!userData || !userData[type]){
             throw new Error(`There are not any date for role="${role}", type="${type}"`);
-
         }
 
         this.username = userData[type].username;

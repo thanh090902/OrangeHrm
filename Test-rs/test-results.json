@@ -1,0 +1,160 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\thanh.thai\\Documents\\orangePlayWright\\playwright.config.ts",
+    "rootDir": "C:/Users/thanh.thai/Documents/orangePlayWright",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "dot",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "Test-rs/test-results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "always"
+        }
+      ],
+      [
+        "C:\\Users\\thanh.thai\\Documents\\orangePlayWright\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        {
+          "outputFolder": "Test-rs/allure-results"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/thanh.thai/Documents/orangePlayWright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/thanh.thai/Documents/orangePlayWright",
+        "testIgnore": [],
+        "testMatch": [
+          "tests/orange_001.spect.ts"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.54.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "tests\\orange_001.spect.ts",
+      "file": "tests/orange_001.spect.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Demo test",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 185623,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Đang chạy trên: chromium\n"
+                    },
+                    {
+                      "text": "path file: C:\\Users\\thanh.thai\\Documents\\orangePlayWright\\locators\\login.locators.json\n"
+                    },
+                    {
+                      "text": "path file: C:\\Users\\thanh.thai\\Documents\\orangePlayWright\\locators\\base.locators.json\n"
+                    },
+                    {
+                      "text": "Navigating to: My Info, Locator: xpath=//span[contains(.,'%s')]/parent::a\n"
+                    },
+                    {
+                      "text": "Formatted locator: xpath=//span[contains(.,'My Info')]/parent::a\n"
+                    },
+                    {
+                      "text": "path file: C:\\Users\\thanh.thai\\Documents\\orangePlayWright\\locators\\myinfor.locators.json\n"
+                    },
+                    {
+                      "text": "Formatted locator for My Info: xpath=//a[text()='Job']\n"
+                    },
+                    {
+                      "text": "Job Details: JobDetails {\n  joinedDate: \u001b[32m'1990-11-10'\u001b[39m,\n  jobTitle: \u001b[32m'HR Manager (Deleted)'\u001b[39m,\n  jobCategory: \u001b[32m'Officials and Managers'\u001b[39m,\n  subUnit: \u001b[32m'Human Resources'\u001b[39m,\n  location: \u001b[32m'Texas R&D'\u001b[39m,\n  employmentStatus: \u001b[32m'Full-Time Permanent'\u001b[39m,\n  jobSpecification: \u001b[32m'Not Defined'\u001b[39m\n}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-31T07:18:46.776Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\thanh.thai\\Documents\\orangePlayWright\\test-results\\tests-orange_001.spect.ts-Demo-test-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\thanh.thai\\Documents\\orangePlayWright\\test-results\\tests-orange_001.spect.ts-Demo-test-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "89d2dbc2dfd3f6d5bfd5-fe9cc074a4ccb437b74f",
+          "file": "tests/orange_001.spect.ts",
+          "line": 10,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-07-31T07:18:44.123Z",
+    "duration": 190994.826,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
