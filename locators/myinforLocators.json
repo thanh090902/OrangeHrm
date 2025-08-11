@@ -1,5 +1,5 @@
 {
-    "chromium": {
+    "desktop": {
         "EN": {
             "navSidebarUserinfor": "//a[text()='%s']",
             "lblJobTitle":"//label[text()='Job Title']/parent::div/following-sibling::div//div[contains(@class,'text-input')]",
@@ -15,10 +15,7 @@
             "txtLastName":"//input[@name='lastName']"
         }
     },
-    "firefox":{
-
-    },
-    "webkit":{
+    "mobile":{
 
     }
 }

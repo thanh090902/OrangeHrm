@@ -5,25 +5,27 @@ export class LocatorHelper {
 
     private page;
     private locators: any;
-    private browserName: string;
+    private platForm: string;
+    private pageKey: string;
 
 
-    constructor(page: any, browserName: string, pageKey: string, language: string) {
+    constructor(page: any, platForm: string, pageKey: string, language: string) {
         this.page = page
-        this.browserName = browserName
-        const filePath = path.resolve(__dirname, `../locators/${pageKey}.locators.json`);
+        this.platForm = platForm
+        this.pageKey = pageKey
+        const filePath = path.resolve(__dirname, `../locators/${pageKey}Locators.json`);
         console.log('path file: ' + filePath)
         const raw = fs.readFileSync(filePath, 'utf-8');
         const all = JSON.parse(raw);
 
         this.locators =
-            (all[browserName] && all[browserName][language]) ||
-            (all['chromium'] && all['chromium'][language]) || // if the argument is empty use default is chromium
+            (all[platForm] && all[platForm][language]) ||
+            (all['desktop'] && all['desktop'][language]) || // if the argument is empty use default is desktop
             {};
 
 
         if (Object.keys(this.locators).length === 0) {
-            throw new Error(`Locator is not found for browser="${browserName}", language="${language}"`);
+            throw new Error(`Locator is not found for platform="${platForm}", language="${language}"`);
         }
 
     }
@@ -32,7 +34,7 @@ export class LocatorHelper {
         const value = this.locators[key];
 
         if (!value) {
-            throw new Error(`The locator "${key}" dose not exist in file "${this.browserName}"`)
+            throw new Error(`The locator "${key}" dose not exist in file: "${this.pageKey}"`)
         }
         // check if the locator is xpath so start it with prefic "xpath="
         if (typeof value === 'string' && value.trim().startsWith('//')) {

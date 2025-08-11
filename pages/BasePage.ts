@@ -10,9 +10,6 @@ export class BasePage {
         this.page = page;
         this.locatorsFile = new LocatorHelper(page, browserName, pageKey, language);
     }
-    getLocatorInFile(key: string): string {
-        return this.locatorsFile.getValue(key);
-    }
 
     async navigateTo(navigateText: string) {
         const locator = this.locatorsFile.getValue('navSidebarMenu');
